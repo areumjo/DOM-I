@@ -46,6 +46,42 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 Task 1: Create selectors to point your data
 Task 2: Update the HTML with the JSON data
 Take 3: Add new content 
-  - change color of nav text to be grenn 
+  - change color of nav text to be green 
   - use .appendChild() and .prepend()
 */
+
+// nav
+const anchors = document.querySelectorAll('a');
+
+anchors[0].textContent = siteContent["nav"]["nav-item-1"];
+anchors[1].textContent = siteContent["nav"]["nav-item-2"];
+anchors[2].textContent = siteContent["nav"]["nav-item-3"];
+anchors[3].textContent = siteContent["nav"]["nav-item-4"];
+anchors[4].textContent = siteContent["nav"]["nav-item-5"];
+anchors[5].textContent = siteContent["nav"]["nav-item-6"];
+
+// h1
+const h1Text = document.querySelector('h1');
+h1Text.textContent = siteContent["cta"]['h1'];
+
+const btn = document.querySelector('button');
+btn.textContent = siteContent["cta"]["button"];
+
+// code-image
+const codeImage = document.getElementById("cta-img" );
+codeImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// top-content
+// h4
+const h4Content = document.querySelectorAll('h4');
+h4Content[0].textContent = siteContent["main-content"]["features-h4"];
+h4Content[1].textContent = siteContent["main-content"]["about-h4"];
+h4Content[2].textContent = siteContent["main-content"]["services-h4"];
+h4Content[3].textContent = siteContent["main-content"]["product-h4"];
+h4Content[4].textContent = siteContent["main-content"]["vision-h4"];
+h4Content[5].textContent = siteContent["contact"]["contact-h4"];
+
+
+// middle-img
+const midImag = document.getElementById("middle-img" );
+midImag.src = siteContent["main-content"]["middle-img-src"];
