@@ -40,3 +40,12 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+/* 
+Task 1: Create selectors to point your data
+Task 2: Update the HTML with the JSON data
+Take 3: Add new content 
+  - change color of nav text to be grenn 
+  - use .appendChild() and .prepend()
+*/
