@@ -40,3 +40,106 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+/* 
+Task 1: Create selectors to point your data
+Task 2: Update the HTML with the JSON data
+Take 3: Add new content 
+  - change color of nav text to be green 
+  - use .appendChild() and .prepend()
+*/
+
+// nav
+const anchors = document.querySelectorAll('a');
+
+anchors[0].textContent = siteContent["nav"]["nav-item-1"];
+anchors[1].textContent = siteContent["nav"]["nav-item-2"];
+anchors[2].textContent = siteContent["nav"]["nav-item-3"];
+anchors[3].textContent = siteContent["nav"]["nav-item-4"];
+anchors[4].textContent = siteContent["nav"]["nav-item-5"];
+anchors[5].textContent = siteContent["nav"]["nav-item-6"];
+
+// h1
+const h1Text = document.querySelector('h1');
+//h1Text.textContent = siteContent["cta"]['h1'];
+h1Text.textContent = "DOM"
+const newBr = document.createElement("BR");
+h1Text.appendChild(newBr);
+
+const y = document.createTextNode("is");
+h1Text.appendChild(y);
+
+const newBr2 = document.createElement("BR");
+h1Text.appendChild(newBr2);
+const z = document.createTextNode("awesome");
+h1Text.appendChild(z);
+
+// h1 button
+const btn = document.querySelector('button');
+btn.textContent = siteContent["cta"]["button"];
+
+// code-image
+const codeImage = document.getElementById("cta-img" );
+codeImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// top-content
+// h4
+const h4Content = document.querySelectorAll('h4');
+h4Content[0].textContent = siteContent["main-content"]["features-h4"];
+h4Content[1].textContent = siteContent["main-content"]["about-h4"];
+h4Content[2].textContent = siteContent["main-content"]["services-h4"];
+h4Content[3].textContent = siteContent["main-content"]["product-h4"];
+h4Content[4].textContent = siteContent["main-content"]["vision-h4"];
+h4Content[5].textContent = siteContent["contact"]["contact-h4"];
+
+// p content
+const pContent = document.querySelectorAll('p');
+pContent[0].textContent = siteContent["main-content"]["features-content"];
+pContent[1].textContent = siteContent["main-content"]["about-content"];
+pContent[2].textContent = siteContent["main-content"]["services-content"];
+pContent[3].textContent = siteContent["main-content"]["product-content"];
+pContent[4].textContent = siteContent["main-content"]["vision-content"];
+
+pContent[6].textContent = siteContent["contact"]["phone"];
+pContent[7].textContent = siteContent["contact"]["email"];
+pContent[8].textContent = siteContent["footer"]["copyright"];
+
+// middle-img
+const midImag = document.getElementById("middle-img" );
+midImag.src = siteContent["main-content"]["middle-img-src"];
+
+// fix address
+const contact2 = document.createTextNode("Somewhere, USA")
+const newBr3 = document.createElement("BR");
+
+pContent[5].textContent = "123 Way 456 Street";
+pContent[5].appendChild(newBr3);
+pContent[5].appendChild(contact2);
+
+
+// change color of nav text to be green 
+anchors.forEach( a => a.style.color = "green");
+
+// add two new items to nav
+const si = document.createElement("a");
+si.textContent = "Sign In";
+const nav = document.querySelector('nav')
+nav.appendChild(si).style.color = "green";
+
+const su = document.createElement("a");
+su.textContent = "Sign Up";
+nav.appendChild(su).style.color = "green";
+
+// add pointer cursor
+si.style.cursor = "pointer";
+su.style.cursor = "pointer";
+
+// stretch goals
+// update styles
+const header = document.querySelector('header');
+header.style.borderBottom = "0.5px solid lightgray";
+header.style.paddingBottom = "10px";
+
+// add 'alert' function to button 
+btn.addEventListener('click', () => alert(`Let's get started!`)); 
