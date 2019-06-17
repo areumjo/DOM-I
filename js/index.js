@@ -120,3 +120,15 @@ pContent[5].appendChild(contact2);
 
 // change color of nav text to be green 
 anchors.forEach( a => a.style.color = "green");
+
+// add two new items to nav
+const si = document.createElement("a");
+si.textContent = "Sign In";
+const nav = document.querySelector('nav')
+nav.appendChild(si).style.color = "green";
+
+const su = document.createElement("a");
+su.textContent = "Sign Up";
+nav.appendChild(su).style.color = "green";
+
+btn.addEventListener('click', () => alert(`Let's get started!`)); 
