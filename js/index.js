@@ -75,17 +75,7 @@ h1Text.appendChild(newBr2);
 const z = document.createTextNode("awesome");
 h1Text.appendChild(z);
 
-
-// h1Text.textContent(h1Text1[0]);
-// h1Text.appendChild(newBr);
-
-// const newBr = document.createElement("BR");
-// const spans = document.createElement("span");
-// h1Text.textContent= "DOM";
-// h1Text.appendChild(spans);
-// h1Text.appendChild(newBr);
-// h1Text.appendChild(is);
-
+// h1 button
 const btn = document.querySelector('button');
 btn.textContent = siteContent["cta"]["button"];
 
@@ -110,7 +100,7 @@ pContent[1].textContent = siteContent["main-content"]["about-content"];
 pContent[2].textContent = siteContent["main-content"]["services-content"];
 pContent[3].textContent = siteContent["main-content"]["product-content"];
 pContent[4].textContent = siteContent["main-content"]["vision-content"];
-pContent[5].textContent = siteContent["contact"]["address"];
+
 pContent[6].textContent = siteContent["contact"]["phone"];
 pContent[7].textContent = siteContent["contact"]["email"];
 pContent[8].textContent = siteContent["footer"]["copyright"];
@@ -118,3 +108,15 @@ pContent[8].textContent = siteContent["footer"]["copyright"];
 // middle-img
 const midImag = document.getElementById("middle-img" );
 midImag.src = siteContent["main-content"]["middle-img-src"];
+
+// fix address
+const contact2 = document.createTextNode("Somewhere, USA")
+const newBr3 = document.createElement("BR");
+
+pContent[5].textContent = "123 Way 456 Street";
+pContent[5].appendChild(newBr3);
+pContent[5].appendChild(contact2);
+
+
+// change color of nav text to be green 
+anchors.forEach( a => a.style.color = "green");
