@@ -131,4 +131,15 @@ const su = document.createElement("a");
 su.textContent = "Sign Up";
 nav.appendChild(su).style.color = "green";
 
+// add pointer cursor
+si.style.cursor = "pointer";
+su.style.cursor = "pointer";
+
+// stretch goals
+// update styles
+const header = document.querySelector('header');
+header.style.borderBottom = "0.5px solid lightgray";
+header.style.paddingBottom = "10px";
+
+// add 'alert' function to button 
 btn.addEventListener('click', () => alert(`Let's get started!`)); 
